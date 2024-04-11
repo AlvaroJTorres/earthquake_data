@@ -21,7 +21,7 @@ const Feature = () => {
   }, [])
 
   const handleSubmit = async (formData) => {
-    const commentData = await newComment(id, formData)
+    const commentData = await newComment(id, formData.trim())
     if (commentData.hasOwnProperty("errors")) {
       alert(commentData.errors);
     } else {
