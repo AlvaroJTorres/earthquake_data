@@ -2,6 +2,10 @@
 
 # earthquake_data
 
+This Ruby on Rails application is designed to interact with an external website API and obtain seismological data from the last 30 days. Through scheduled tasks, our application retrieves data from this API, storing it in a database using a Feature model. Additionally, we've built an API within our Rails backend to facilitate retrieval of this earthquake data via GET requests. It also provides functionality for visitors to leave comments related to each earthquake feature. These comments are stored in a Comment model, connected to the Feature model by Active Record Associations, and can be submitted via POST requests to our API.
+To enhance interaction, the frontend size is developed using React, employing the React library integrated directly within our Rails project. This allows us to integrate React practices such as styled components, React hooks, Routers and Bootstrap for styling. 
+Overall, this project offers a comprehensive solution for accessing relevant earthquake data, presenting it in an intuitive frontend interface built with React, and enabling user engagement through comment submission and retrieval.
+
 ## Install
 
 ### Clone the repository
@@ -22,7 +26,7 @@ rbenv install 3.0.4
 
 ### Install dependencies
 
-This project incorporates React for the frontend development. So it can leverage the capabilities of React within the Rails ecosystem to build dynamic and interactive user interfaces. However, it's important to note that the React library we use is tightly integrated into our Rails project and is not a standalone React application, that's why you have to also install the dependencies required to run it properly as well as the ruby gems integrated in the project. 
+This project incorporates React for the frontend development. So it can leverage the capabilities of React within the Rails ecosystem to build dynamic and interactive user interfaces. However, it's important to note that the React library is tightly integrated into the project and is not a standalone React application, that's why you have to also install the dependencies required to run it properly as well as the ruby gems integrated in the project.
 
 ```shell
 bundle install
